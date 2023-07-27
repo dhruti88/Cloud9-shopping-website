@@ -1,0 +1,118 @@
+<html>
+<head>
+   <title>Place Your Order</title>
+<style>
+body{
+
+font-family: verdana;
+font-size: 20px;
+}
+div{
+margin:5px;
+padding: 10px;
+}
+h1
+{
+border:5px solid; 
+border-color:black; 
+margin:5px; 
+padding:5px;
+text-align:center;
+text-shadow: 2px 2px gray;
+}
+body{
+background: radial-gradient(#fff,#ccccff);
+}
+
+</style>
+
+
+<script type="text/javascript">
+   function validationform() 
+   {
+      
+      var firstName=document.vform.fn.value;
+      var lastName=document.vform.ln.value;
+      var nameRegex = /^[a-zA-Z]+$/;
+      var email = document.vform.email.value;
+
+      
+      if (firstName == "") {
+         alert("First name must be filled out");
+         return false;
+      }
+
+      if (lastName == "") {
+         alert("Last name must be filled out");
+         return false;
+      }
+
+      if (!nameRegex.test(firstName) || !nameRegex.test(lastName)) {
+         alert("Name fields should be letters only");
+         return false;
+      }
+
+      return true;
+   }
+</script>
+
+</head>
+<body bgcolor="#ccddff" text="Black" onsubmit="validationform()">
+
+<h1>Submit your details to place order :</h1>
+
+<div align="center">
+<table>
+<form name="vform" method="post" >
+<tr>
+<td>Firstname :</td>
+<td><input type="text" name="fn" value="" size="25" maxlenth="15"/><br></td>
+</tr>
+
+<tr>
+<td>Lastname :</td>
+<td><input type="text" name="ln" value="" size="25" maxlenth="15"/><br><td>
+</tr>
+
+<tr>
+<td>E-mail :</td>
+<td><input type="email" name="email" value="" size="35" maxlenth="25"/><br></td>
+</tr>
+
+<tr>
+<td>Mobile_No:</td>
+<td><input type="text" name="Mno" /><br></td>
+</tr>
+
+<tr>
+<td>Address :</td>
+<td>
+<Textarea name="Add" Rows="4" cols="25" placeholder="Enter address Here..."/>
+</textarea><br>
+</td>
+</tr>
+
+
+<tr>
+<td>Payment Method</td>
+<td>
+<select>
+		<option>Cash On Delievery</option>
+		<option>Net banking/UPI</option>
+            </select>
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td>
+<input type="submit" name="submit" value="Submit" />
+<input type="Reset" name="Reset" value="Reset" />
+</td>
+</tr>
+
+</form>
+</table>
+</div>
+</body>
+</html>

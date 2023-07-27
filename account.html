@@ -1,0 +1,169 @@
+<html>
+<head>
+	
+	<title>Cloud 9 | The self-love</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="header">
+<div class="container">
+	<div class="navigation">
+		<div class="logo">
+		<img src = "images/logo.png" width="200px">
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li> 
+				<li><a href="products.html">Buy Products</a></li>
+				<li><a href="about.html">About us</a></li>
+			</ul>
+		</nav>	
+	</div>
+
+<div class="account-page">
+ <div class="conatiner">
+   <div class="row">
+	<div class="col">
+        <h1>Let's take the womanhood to the cloud-9 !</h1>
+        <img src="images/fashion.jpg" widht="100%">
+	</div>
+
+	<div class="col">
+        <div class="form-container">
+	      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Login Or register if new user !<br><br>
+		<div class="form-btn">
+			<span onclick="login()">Login</span>
+			<span onclick="register()">Register</span>
+                  <hr id="indicator">
+		</div>
+
+		<form name='form-login' id="RegForm">
+
+        <h1>REGISTER</h1>
+        <label for="name">Email</label>
+        <input type="email" id="name" placeholder="Username(Email-Id)" required>
+
+        <label for="pw">Password</label>
+        <input type="password" id= "pw" placeholder="Password" required>
+
+        <ul class="helper-text">
+            <li class="length">Must be at least 8 characters long.</li>
+            <li class="lowercase">Must contain a lowercase letter.</li>
+            <li class="uppercase">Must contain an uppercase letter.</li>
+            <li class="special">Must contain a number or special character.</li>
+        </ul>
+        <input id="rgstr_btn" class="btn" type="submit" value="Register" onclick="return store()">
+
+    </form>
+
+		<form name='form-login' id="LoginForm" action="index.html">
+
+        <h1>SIGN IN</h1>
+
+        <label for="userName">Email</label>
+        <input type="email" id="userName" placeholder="Username(Email-Id)" required>
+
+        <label for="userPw">Password</label>
+        <input type="password" id= "userPw" placeholder="Password" required>
+
+        <input id= "login_btn" class="btn" type="submit" value="Login" onclick="return check()">
+
+    </form>
+
+	  </div>
+	</div>
+
+   </div>
+  </div>
+</div>
+	
+
+
+<script>
+var LoginForm= document.getElementById("LoginForm");
+var RegForm= document.getElementById("RegForm");
+var indicator = document.getElementById("indicator");
+function register()
+{
+RegForm.style.transform = "translateX(0px)";
+LoginForm.style.transform = "translateX(0px)";
+indicator.style.transform = "translateX(100px)";
+}
+
+function login()
+{
+RegForm.style.transform = "translateX(300px)";
+LoginForm.style.transform = "translateX(300px)";
+indicator.style.transform = "translateX(0px)";
+}
+</script> 
+
+
+<script>
+function store(){
+
+    var name = document.getElementById('name');
+    var pw = document.getElementById('pw');
+    var lowerCaseLetters = /[a-z]/g;
+    var upperCaseLetters = /[A-Z]/g;
+    var numbers = /[0-9]/g;
+
+    if(name.value.length == 0){
+        alert('Please fill in email');
+
+    }else if(pw.value.length == 0){
+        alert('Please fill in password');
+
+    }else if(name.value.length == 0 && pw.value.length == 0){
+        alert('Please fill in email and password');
+
+    }else if(pw.value.length > 8){
+        alert('Max of 8');
+
+    }else if(!pw.value.match(numbers)){
+        alert('please add 1 number');
+
+    }else if(!pw.value.match(upperCaseLetters)){
+        alert('please add 1 uppercase letter');
+
+    }else if(!pw.value.match(lowerCaseLetters)){
+        alert('please add 1 lovercase letter');
+
+    }else{
+        localStorage.setItem('name', name.value);
+        localStorage.setItem('pw', pw.value);
+        alert('Your account has been created');
+	  return true;
+    }
+}
+
+//checking
+
+function check()
+{
+    var storedName = localStorage.getItem('name');
+    var storedPw = localStorage.getItem('pw');
+
+    var userName = document.getElementById('userName');
+    var userPw = document.getElementById('userPw');
+
+    if(userName.value == storedName && userPw.value == storedPw){
+        alert('You are logged in !');
+	  return true;
+    }
+    else
+    {
+        alert('Error while login ! Enter the valid details !');
+	  return false;
+    }
+}
+
+</script>
+
+
+</body>
+</html> 

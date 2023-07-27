@@ -1,0 +1,252 @@
+<html>
+<head>
+	<title>Our products</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+  
+</script>
+
+
+<script>
+function fact()
+{
+var p1;
+var p2;
+var p3;
+var p4;
+var p5;
+var p6;
+var p7;
+var p8;
+
+p1 = document.getElementById("p1").value;
+p2 = document.getElementById("p2").value;
+p3 = document.getElementById("p3").value;
+p4 = document.getElementById("p4").value;
+p5 = document.getElementById("p5").value;
+p6 = document.getElementById("p6").value;
+p7 = document.getElementById("p7").value;
+p8 = document.getElementById("p8").value;
+
+
+var sum;
+sum=(p1*599)+(p2*399)+(p3*1999)+(p4*899)+(p5*599)+(p6*699)+(p7*2999)+(p8*1999);
+document.getElementById("res").innerHTML = "Total Amount : " + sum ;
+}
+
+</script>
+
+
+
+
+
+<body ng-app="">
+
+<div class="container">
+	<div class="navigation">
+		<div class="logo">
+		<img src = "images/logo.png" width="200px">
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li> 
+				<li><a href="products.html">Buy Products</a></li>
+				<li><a href="about.html">About us</a></li>
+				<li><a href="account.html">Login/Register</a></li>
+			</ul>
+		</nav>	
+	</div>
+</div>
+
+
+<div class="small-container">
+	<div class="row">
+	<h2>All products by our brand</h2>
+	<select>
+		<option>Default sorting</option>
+		<option>Sort by brand</option>
+		<option>Sort by price</option>
+		<option>Sort by ratings</option>
+		<option>Sort by offers</option>
+	</select>
+	</div>
+</div>
+
+
+<div class="catagories">
+ <div class="small-container">
+	<div class="row">
+
+	 <div class="col4">
+		<img src="images/shoes2.jpg">
+		<h4>White Sneakers</h4>
+		<h4 id="pr1">Rs.599</h4>
+		<center>
+		<select>
+		<option>select size</option>
+		<option>XS</option>
+		<option>S</option>
+		<option>M</option>
+		<option>L</option>
+		<option>XL</option>
+            </select>
+		<input type="number" min="0" value="0" id="p1">
+		<a href="" class="btn" onclick="fact()">Add to cart</a>
+	</center>
+
+
+	 </div>
+
+	<div class="col4">
+		<img src="images/Bag.jpg">
+		<h4>Brown HandBag</h4>
+		<h4 id="pr2">Rs.399</h4>
+		<center>
+		<select>
+		<option>select size</option>
+		<option>XS</option>
+		<option>S</option>
+		<option>M</option>
+		<option>L</option>
+		<option>XL</option>
+            </select>
+		<input type="number" min="0" value="0" id="p2">
+		<a href="" class="btn" onclick="fact()">Add to cart</a>
+	</center>
+	 </div>
+
+	 <div class="col4">
+		<img src="images/saree.jpg">
+		<h4>Navy blue saree</h4>
+		<h4 id="pr3">Rs.1999</h4>
+		<center>
+		<select>
+		<option>select size</option>
+		<option>XS</option>
+		<option>S</option>
+		<option>M</option>
+		<option>L</option>
+		<option>XL</option>
+            </select>
+		<input type="number" min="0" value="0" id="p3">
+		<a href="" class="btn" onclick="fact()">Add to cart</a>
+	</center>
+	 </div>
+
+	 <div class="col4">
+		<img src="images/black.jpg">
+		<h4>Black western wear</h4>
+		<h4 id="pr4">Rs.899</h4>
+		<center>
+		<select>
+		<option>select size</option>
+		<option>XS</option>
+		<option>S</option>
+		<option>M</option>
+		<option>L</option>
+		<option>XL</option>
+            </select>
+		<input type="number" min="0" value="0" id="p4">
+		<a href="" class="btn" onclick="fact()">Add to cart</a>
+	</center>
+	 </div>
+      </div>
+
+</div>
+</div>
+
+<div class="catagories">
+ <div class="small-container">
+	<div class="row">
+
+	 <div class="col4">
+		<img src="images/shoes.jpg">
+		<h4>Blue shoes</h4>
+		<h4>Rs.599</h4>
+		<center>
+		<select>
+		<option>select size</option>
+		<option>XS</option>
+		<option>S</option>
+		<option>M</option>
+		<option>L</option>
+		<option>XL</option>
+            </select>
+		<input type="number" min="0" value="0" id="p5">
+		<a href="" class="btn" onclick="fact()">Add to cart</a>
+	</center>
+	 </div>
+
+	<div class="col4">
+		<img src="images/bag2.jpg">
+		<h4>Black leather Bag</h4>
+		<h4>Rs.699</h4>
+		<center>
+		<select>
+		<option>select size</option>
+		<option>XS</option>
+		<option>S</option>
+		<option>M</option>
+		<option>L</option>
+		<option>XL</option>
+            </select>
+		<input type="number" min="0" value="0" id="p6">
+		<a href="" class="btn" onclick="fact()">Add to cart</a>
+	</center>
+	 </div>
+
+	 <div class="col4">
+		<img src="images/saree2.jpg">
+		<h4>Traditional yellow saree</h4>
+		<h4>Rs.2999</h4>
+		<center>
+		<select>
+		<option>select size</option>
+		<option>XS</option>
+		<option>S</option>
+		<option>M</option>
+		<option>L</option>
+		<option>XL</option>
+            </select>
+		<input type="number" min="0" value="0" id="p7">
+		<a href="" class="btn" onclick="fact()">Add to cart</a>
+	</center>
+	 </div>
+
+	 <div class="col4">
+		<img src="images/green.jpeg">
+		<h4>Western wear in apple green color</h4>
+		<h4>Rs.1999</h4>
+		<center>
+		<select>
+		<option>select size</option>
+		<option>XS</option>
+		<option>S</option>
+		<option>M</option>
+		<option>L</option>
+		<option>XL</option>
+            </select>
+		<input type="number" min="0" value="0" id="p8">
+		<a href="" class="btn" onclick="fact()">Add to cart</a>
+	       </center>
+	 </div>
+       
+    </div>
+
+</div>
+</div>
+
+
+    <div class="paymentBtn"><center>
+	  <h3><p id="res"></p></h3>
+       <a href="vf.html" target="_blank"> <button type="submit" class="btn" >Place Order</button></a></center>
+    </div>
+ 
+
+
+</body>
+</html> 
